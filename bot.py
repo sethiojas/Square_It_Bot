@@ -11,7 +11,7 @@ dispatcher = updater.dispatcher
 
 def start(update, context):
 	''' Replies with a Generic mesage to /start and /help commands'''
-	context.bot.send_message(chat_id = update.message.chat_id, text = "I'm Square It bot! Send me and image and I'll "
+	context.bot.send_message(chat_id = update.message.chat_id, text = "I'm Square It bot! Send me an image and I'll "
 		"square it for you!")
 
 def Square_It(update, context):
