@@ -1,4 +1,4 @@
-#Square It Bot
+# Square It Bot
 ![SquareIt Bot](https://raw.githubusercontent.com/sethiojas/readme_images/master/SquareIt_bot/cover.png)
 
 ## Table of Contents
