@@ -5,6 +5,7 @@ import os
 import square
 import telegram
 
+#initialize updater and dispatcher
 updater = Updater(token='TOKEN', use_context=True)
 dispatcher = updater.dispatcher
 
@@ -26,6 +27,8 @@ def Square_It(update, context):
 	with open("name.txt", 'w') as f:
 		f.write(FILE_NAME)
 
+	#Custom inline keyboard to present an option of black or white background for
+	#squared image
 	custom_keyboard = [[telegram.InlineKeyboardButton('White', callback_data = 'White')],
  					[telegram.InlineKeyboardButton('Black', callback_data = 'Black')]]
 	
@@ -37,12 +40,13 @@ def Square_It(update, context):
 
 def callback(update, context):
 	'''
-	Sends the square image according to the choice.
+	Sends the square image according to the
+	Background color choice.
 	Deletes the local copy of the picture
 	'''
 
 	query = update.callback_query
-	colour = query.data
+	colour = query.data #selected color as per user input
 
 	query.edit_message_text(text=f"Selected option: {colour}")
     
