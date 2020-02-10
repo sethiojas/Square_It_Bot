@@ -6,17 +6,11 @@ def square_image(filename, colour):
 	Squares the image whose path is received.
 	The padding is according to the user choice (Black/White).
 	'''
-
-	#Open the image at the specified path
-	#Square it with the color provided
-	#Delete the received image
-	#Save this new squared image by the same name
-	#(path)
-	#Lastly close the new image
 	
 	im = Image.open(filename)
 	size = max(im.size)
 	x, y= im.size
+	
 	if colour.lower() == "white":
 		RGB = (255, 255, 255)
 	elif colour.lower() == "black":
@@ -24,7 +18,9 @@ def square_image(filename, colour):
 
 	new_im = Image.new('RGB', (size, size), RGB)
 	new_im.paste(im, (int((size - x) / 2), int((size - y) / 2)))
+	
 	im.close()
 	os.remove(filename)
+	
 	new_im.save(filename)
 	new_im.close()

@@ -16,7 +16,7 @@ def start(update, context):
 		"square it for you!")
 
 def Square_It(update, context):
-	''' Saves picture locally and asks the user for the colour of background '''
+	''' Saves picture locally and asks the user for the color of padding '''
 	
 	#Download photo
 	image = context.bot.getFile(update.message.photo[-1].file_id)
@@ -27,7 +27,7 @@ def Square_It(update, context):
 	with open("name.txt", 'w') as f:
 		f.write(FILE_NAME)
 
-	#Custom inline keyboard to present an option of black or white background for
+	#Custom inline keyboard to present an option of black or white padding for
 	#squared image
 	custom_keyboard = [[telegram.InlineKeyboardButton('White', callback_data = 'White')],
  					[telegram.InlineKeyboardButton('Black', callback_data = 'Black')]]
@@ -41,8 +41,7 @@ def Square_It(update, context):
 def callback(update, context):
 	'''
 	Sends the square image according to the
-	Background color choice.
-	Deletes the local copy of the picture
+	padding color choice of user.
 	'''
 
 	query = update.callback_query
