@@ -9,7 +9,7 @@
 
 ## About
 It is a telegram bot that squares any images the user sends to it.
-Bot provides an option of 2 colours (for now) which are Black and White, to be used as the background.
+Bot provides an option of 2 colours which are Black and White, to be used as the background.
 
 ***[USE THE BOT](http://t.me/squareIt_bot)***
 
